@@ -1,0 +1,182 @@
+\chapter{Resultado}
+
+\resumodocapitulo{Aqui expõem-se os resultados obtidos pelos algoritmos desenvolvidos neste trabalho a fim de exemplificar a proposta do produto desenvolvido.}
+
+O resultado obtido ao final do projeto foi um produto que objetiva informar o usuário sobre curiosidades e fatos de uma conversa do WhatsApp entre duas pessoas com total segurança, anonimidade e de forma gratuita. O tempo de processamento para gerar as estatísticas em todos os casos testados foi inferior a 1 minuto (conversas com até 200 mil mensagens), sendo todos os gráficos interativos, permitindo a função \textit{zoom}, exportação do gráfico como imagem e, nos casos em que se aplica, a filtragem dos dados exibidos no gráfico.
+
+O site \href{http://analizap.tk/}{Analizap} conta com uma \href{https://analizap.tk/exemplo}{página de exemplo} interativa de resultados que demonstra o produto final entregue aos usuários do serviço. Para obter os resultados para uma conversa pessoal, é preciso exportar o \textit{chat} escolhido e submeter o documento de texto no formulário apresentado na Figura \ref{formulario_txt}, disponível na página inicial do site.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{TCC/figuras/form.png}
+    \caption{Formulário de envio da conversa a ser analisada no site Analizap.}
+    \label{formulario_txt}
+\end{figure}
+
+Para ilustrar o resultado final com casos reais, foram selecionadas três conversas previamente autorizadas com participantes que configuram classes distintas de conversas: relacionamento amoroso, profissional e familiar. As capturas de tela do site podem ser vistas abaixo para cada uma das classes de conversa. Por fim, é apresentada uma análise sobre as características intrínsecas de cada tipo de conversa e algumas diferenças entre elas.
+
+Um detalhe importante é que o gráfico de palavras mais utilizadas não é apresentado por privacidade. Além disso, no gráfico intitulado “Quantidade de mensagens e tempo de conversa por dia”, nos casos de uma conversa profissional e familiar, os exemplos utilizados são de conversas de muitos meses e, por isso, apresentamos apenas uma estatística para facilitar a visualização das informações: a quantidade de mensagens enviadas (barras laranjadas). Não são exibidas as estatísticas “Minutos” (tempo gasto na conversa, barras azuis) e a “Mensagens por minuto” (velocidade das mensagens trocadas, linha cinza escuro).
+
+\begin{enumerate}
+  \item \textbf{Relacionamento amoroso:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.2]{TCC/figuras/ds-lu.jpg}
+        \caption{Estatísticas descritivas de namorados.}
+        \label{ds-namorados}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.2]{TCC/figuras/pz-lu.jpg}
+        \caption{Gráficos de pizza de namorados.}
+        \label{pz-namorados}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.18]{TCC/figuras/bars-lu.jpg}
+        \caption{Série temporal de namorados.}
+        \label{bars-namorados}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.18]{TCC/figuras/area-lu.jpg}
+        \caption{Gráfico mensal de namorados.}
+        \label{area-namorados}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.2]{TCC/figuras/pl-lu.jpg}
+        \caption{Gráficos polares de namorados.}
+        \label{pl-namorados}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.2]{TCC/figuras/hm-lu.jpg}
+        \caption{Mapa de calor de namorados.}
+        \label{hm-namorados}
+    \end{figure}
+  
+  \item \textbf{Relacionamento profissional:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.45]{TCC/figuras/ds_renato.png}
+        \caption{Estatísticas descritivas de colegas de trabalho.}
+        \label{ds-trabalho}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{TCC/figuras/pz_renato.png}
+        \caption{Gráficos de pizza de colegas de trabalho.}
+        \label{pz-trabalho}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.325]{TCC/figuras/bars_renato.png}
+        \caption{Série temporal de colegas de trabalho.}
+        \label{bars-trabalho}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.325]{TCC/figuras/area_renato.png}
+        \caption{Gráfico mensal de colegas de trabalho.}
+        \label{area-trabalho}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{TCC/figuras/pl_renato.png}
+        \caption{Gráficos polares de colegas de trabalho.}
+        \label{pl-trabalho}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{TCC/figuras/hm_renato.png}
+        \caption{Mapa de calor de colegas de trabalho.}
+        \label{hm-trabalho}
+    \end{figure}
+  
+  \item \textbf{Relacionamento familiar:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.45]{TCC/figuras/st_clara.png}
+        \caption{Estatísticas descritivas de familiares.}
+        \label{ds-familia}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{TCC/figuras/pz_clara.png}
+        \caption{Gráficos de pizza de familiares.}
+        \label{pz-familia}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.325]{TCC/figuras/bars_clara.png}
+        \caption{Série temporal de familiares.}
+        \label{bars-familia}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.325]{TCC/figuras/area_clara.png}
+        \caption{Gráfico mensal de familiares.}
+        \label{area-familia}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{TCC/figuras/pl_clara.png}
+        \caption{Gráficos polares de familiares.}
+        \label{pl-familia}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.4]{TCC/figuras/hm_clara.png}
+        \caption{Mapa de calor de familiares.}
+        \label{hm-familia}
+    \end{figure}
+\end{enumerate}
+
+Conforme é possível observar nas Figuras 4.1 até a Figura 4.18, existem diferenças consideráveis entre os gráficos e estatísticas. Essas diferenças serão examinadas nos tópicos abaixo:
+
+\begin{itemize}
+    \item Total de mensagens da conversa:\\
+    A conversa de exemplo de namorados possui uma quantidade maior de mensagens enviadas quando comparada com as demais classes, apesar de ser a mais recente de todas. Isso pode ser explicado pela intensidade de um relacionamento amoroso, que costumeiramente envolve troca de mensagens diárias. Isso também é refletido na média de mensagens trocadas por dia, que é de 211 mensagens para o caso dos namorados, 11 para o relacionamento profissional e 5 no caso do relacionamento familiar.
+    
+    \item Quantidade de dias conversados:\\
+    Percentual de dias em que houve conversa desde a primeira mensagem enviada até a data de exportação:\\
+    \hspace{1cm}- Relacionamento amoroso: 84.8\%\\
+    \hspace{1cm}- Relacionamento profissional: 29.5\%\\
+    \hspace{1cm}- Relacionamento familiar: 28.51\%\\
+    Conforme citado no item acima, pela dinâmica intrínseca de um relacionamento amoroso, a proporção de dias conversados é bem maior do que os outros casos analisados.
+    
+    \item Dia mais ativo:\\
+    As estatísticas de cada classe de conversa utilizada como exemplo são:\\
+    \hspace{1cm}- Relacionamento amoroso: 1.511 mensagens\\
+    \hspace{1cm}- Relacionamento profissional: 124 mensagens\\
+    \hspace{1cm}- Relacionamento familiar: 145 mensagens\\
+    Essa quantidade destoante da quantidade de mensagens trocadas em um único dia no caso da conversa entre namorados pode ser explicada pelo fato de no início do relacionamento haver um período em que o casal se conhece melhor, passando muitas horas conversando seguidamente.
+    
+    \item \textit{Emojis} utilizados:\\
+    No caso do relacionamento amoroso e do familiar, os \textit{emojis} enviados normalmente envolvem expressões de amor e de carinho. Para o caso do relacionamento entre colegas de trabalho, os \textit{emojis} utilizados são mais descontraídos, um fato interessante é que apenas um dos participantes desta conversa envia \textit{emojis}.
+
+    \item Série temporal:\\
+    Pode-se observar com facilidade os \textit{outliers}: para o caso do relacionamento amoroso, nota-se um pico evidente na metade do mês de agosto. Essa anomalia pode ser explicada por uma viagem que ocorreu no dia 7 de agosto em que os namorados ficaram separados por dez dias. Percebe-se que o mês de agosto foi marcado por essa distância extraindo essa informação do gráfico, pois fica nítida a quebra do padrão dos meses anteriores.
+    
+    \item Quantidade de mensagens por dia da semana:\\
+    O \textit{chat} entre colegas de trabalho apresenta um pico de mensagens trocadas na segunda-feira, comportamento esperado já que não há expediente durante o final de semana. A conversa entre namorados tem uma queda de mensagens trocadas na sexta e no sábado, dias que normalmente eles estão juntos. Já para o caso da conversa entre mãe e filha (relacionamento familiar), há uma queda considerável das mensagens trocadas no final de semana, já que ambas estão juntas pois residem na mesma casa.
+    
+    \item Quantidade de mensagens por hora do dia:\\
+    O gráfico destoante dos outros neste caso é o da conversa entre colegas de trabalho, é possível perceber claramente a concentração das mensagens durante o horário de expediente, entre 9h e 17h. Os outros exemplos possuem mensagens distribuídas ao longo de todo o dia.
+\end{itemize}

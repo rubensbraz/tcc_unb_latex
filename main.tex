@@ -1,0 +1,100 @@
+% CLASSES
+% Classe padrão
+\documentclass[12pt, a4paper, openright, titlepage, oneside]{book}
+
+% PACOTES
+\include{TCC/config/pacotes}
+\makeindex
+\makenomenclature
+
+\makeatletter
+\hypersetup{
+    pdftoolbar=true,
+    pdfmenubar=true,
+    pdffitwindow=false,
+    pdfstartview={FitH},
+    pdftitle={Análise exploratória de uma conversa do WhatsApp entre duas pessoas},
+    pdfauthor={Alunos},
+    pdfsubject={Monografia Engenharia Elétrica - UnB},
+    pdfcreationdate={27/09/2022}
+}
+\makeatother
+
+% Define acrônimos
+\nomenclature{CSS}{\textit{Cascading Style Sheets} - Folhas de Estilo em Cascatas}
+\nomenclature{DNS}{\textit{Domain Name System} - Sistema de nome de domínio}
+\nomenclature{HTML}{\textit{HiperText Markup Language} - Linguagem de Marcação de Hipertexto}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% DOCUMENTO PRINCIPAL
+\begin{document}
+
+\setcounter{secnumdepth}{3} % numeração de seções até nível 3
+\setcounter{tocdepth}{2} % numeração de seções no sumário até nível 2
+\pagestyle{empty}
+
+\include{TCC/config/configuracoes_iniciais}
+
+% Comandos para criar a capa e a página de assinaturas
+\capaprincipal
+\capaassinaturas
+\setcounter{page}{3}
+
+% Comando para criar a ficha catalográfica
+\fichacatalografica
+\frontmatter
+\fontsize{12}{14}\selectfont
+
+% Comando para criar a página de dedicatória
+\include{TCC/capitulos/dedicatoria}
+\dedicatoria
+
+% Comando para criar a página de agradecimentos
+\include{TCC/capitulos/agradecimentos}
+\agradecimentos
+
+\setcounter{page}{6}
+
+\include{TCC/capitulos/resumos}
+
+% Sumário e listas
+\sumario
+\listadefiguras
+\listadetabelas
+\listadealgoritmos
+\listadeacronimos
+
+\mainmatter
+\setcounter{page}{1} \pagenumbering{arabic} \pagestyle{plain}
+
+% Inclua capitulos da dissertação aqui
+\include{TCC/capitulos/introducao}
+\include{TCC/capitulos/fundamentos}
+\include{TCC/capitulos/metodologia}
+\include{TCC/capitulos/resultados}
+\include{TCC/capitulos/conclusao}
+
+% Referências bibliográficas
+\bibliographystyle{config/abntex2/abntex2-num} % use este estilo para ABNT numérico
+\renewcommand{\bibname}{REFERÊNCIAS BIBLIOGRÁFICAS}
+\phantomsection
+\addcontentsline{toc}{chapter}{REFERÊNCIAS BIBLIOGRÁFICAS}
+\bibliography{referencias}
+
+% Anexos
+%\anexos
+
+% Não retirar estes comandos
+\makeatletter 
+\renewcommand{\@makechapterhead}[1]{
+  {\parindent \z@ \raggedleft \setfontarial\bfseries 
+        \LARGE \thechapter. \space\space 
+    \uppercase{#1}\par
+    \vskip 40\p@
+  }
+}
+\makeatother
+
+\include{TCC/capitulos/anexo_explicacao_codigos}
+
+\end{document}

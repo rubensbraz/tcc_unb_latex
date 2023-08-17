@@ -1,0 +1,336 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{epsfig}
+\usepackage{eso-pic}
+\usepackage{subfigure}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[thmmarks,amsmath]{ntheorem}
+\usepackage{boxedminipage}
+\usepackage{geometry}
+\usepackage{theorem}
+\usepackage{fancybox}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+\usepackage{url}
+\usepackage{afterpage}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{rotating}
+\usepackage{makeidx}
+\usepackage{epstopdf}
+\usepackage{indentfirst}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{soul}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage[pdfstartview=FitH]{hyperref}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{lastpage}
+\usepackage{lipsum}
+\usepackage[linesnumbered,lined,boxruled,commentsnumbered,algochapter,portuguese]{algorithm2e}
+\usepackage[framed,numbered]{config/mcode}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[font=normalsize]{caption}
+\usepackage{lastpage}
+\usepackage{config/ft_unb} % segue padrão de fonte Times
+\usepackage[num,abnt-etal-list=0]{config/abntex2/abntex2cite} % Citações pela ABNT
+\usepackage{nomencl} % Gerar lista de abreviações - http://franz.kollmann.in/latex/latex.html
+
+\newcommand\BackgroundPic{%
+    \put(0,0){%
+    \parbox[b][\paperheight]{\paperwidth}{%
+    \vfill
+    \centering
+    \includegraphics[width=\paperwidth,height=\paperheight,%
+    keepaspectratio]{figuras/capa_fundo.jpg}%
+    \vfill
+}}}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\hypersetup{colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black,
+}
+
+\newcommand{\citeC}[1]{[\citeonline{#1}]}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\lstdefinestyle{code_style}{
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{orange},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    stepnumber=1,
+    firstnumber=1,
+    numberfirstline=true,
+    alsodigit={.:;},
+    extendedchars=true,
+    literate=
+        {á}{{\'a}}1
+        {à}{{\`a}}1
+        {ã}{{\~a}}1
+        {é}{{\'e}}1
+        {ê}{{\^e}}1
+        {í}{{\'i}}1
+        {ó}{{\'o}}1
+        {õ}{{\~o}}1
+        {ú}{{\'u}}1
+        {ü}{{\"u}}1
+        {ç}{{\c{c}}}1
+}
+\lstset{style=code_style}
+
+\lstdefinelanguage{CSS}{
+    keywords={
+        color,background-image:,margin,padding,font,weight,display,position,top,left,right,bottom,list,style,border,size,white,space,min,width, transition:, transform:, transition-property, transition-duration, transition-timing-function,color:,font-size:,
+    },
+    ndkeywords={
+        accelerator,azimuth,background,background-attachment,
+        background-color,background-image,background-position,
+        background-position-x,background-position-y,background-repeat,
+        behavior,border,border-bottom,border-bottom-color,
+        border-bottom-style,border-bottom-width,border-collapse,
+        border-color,border-left,border-left-color,border-left-style,
+        border-left-width,border-right,border-right-color,
+        border-right-style,border-right-width,border-spacing,
+        border-style,border-top,border-top-color,border-top-style,
+        border-top-width,border-width,bottom,caption-side,clear,
+        clip,color,content,counter-increment,counter-reset,cue,
+        cue-after,cue-before,cursor,direction,display,elevation,
+        empty-cells,filter,float,font,font-family,font-size,
+        font-size-adjust,font-stretch,font-style,font-variant,
+        font-weight,height,ime-mode,include-source,
+        layer-background-color,layer-background-image,layout-flow,
+        layout-grid,layout-grid-char,layout-grid-char-spacing,
+        layout-grid-line,layout-grid-mode,layout-grid-type,left,
+        letter-spacing,line-break,line-height,list-style,
+        list-style-image,list-style-position,list-style-type,margin,
+        margin-bottom,margin-left,margin-right,margin-top,
+        marker-offset,marks,max-height,max-width,min-height,
+        min-width,-moz-binding,-moz-border-radius,
+        -moz-border-radius-topleft,-moz-border-radius-topright,
+        -moz-border-radius-bottomright,-moz-border-radius-bottomleft,
+        -moz-border-top-colors,-moz-border-right-colors,
+        -moz-border-bottom-colors,-moz-border-left-colors,-moz-opacity,
+        -moz-outline,-moz-outline-color,-moz-outline-style,
+        -moz-outline-width,-moz-user-focus,-moz-user-input,
+        -moz-user-modify,-moz-user-select,orphans,outline,
+        outline-color,outline-style,outline-width,overflow,
+        overflow-X,overflow-Y,padding,padding-bottom,padding-left,
+        padding-right,padding-top,page,page-break-after,
+        page-break-before,page-break-inside,pause,pause-after,
+        pause-before,pitch,pitch-range,play-during,position,quotes,
+        -replace,richness,right,ruby-align,ruby-overhang,
+        ruby-position,-set-link-source,size,speak,speak-header,
+        speak-numeral,speak-punctuation,speech-rate,stress,
+        scrollbar-arrow-color,scrollbar-base-color,
+        scrollbar-dark-shadow-color,scrollbar-face-color,
+        scrollbar-highlight-color,scrollbar-shadow-color,
+        scrollbar-3d-light-color,scrollbar-track-color,table-layout,
+        text-align,text-align-last,text-decoration,text-indent,
+        text-justify,text-overflow,text-shadow,text-transform,
+        text-autospace,text-kashida-space,text-underline-position,top,
+        unicode-bidi,-use-link-source,vertical-align,visibility,
+        voice-family,volume,white-space,widows,width,word-break,
+        word-spacing,word-wrap,writing-mode,z-index,zoom, font-family:
+    },
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]',
+    morestring=[b]",
+    alsoletter={:},
+    alsodigit={-}
+}
+
+\lstdefinelanguage{JavaScript}{
+    morekeywords={
+        typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break
+    },
+    morecomment=[s]{/*}{*/},
+    morecomment=[l]//,
+    morestring=[b]",
+    morestring=[b]'
+}
+
+\lstdefinelanguage{HTML5}{
+    language=html,
+    sensitive=false,	
+    alsoletter={<>=-},	
+    morecomment=[s]{<!-}{-->},
+    tag=[s],
+    keywords={
+        <, </, >,
+        </a, <a, </a>,
+        </abbr, <abbr, </abbr>,
+        </address, <address, </address>,
+        </area, <area, </area>,
+        </area, <area, </area>,
+        </article, <article, </article>,
+        </aside, <aside, </aside>,
+        </audio, <audio, </audio>,
+        </audio, <audio, </audio>,
+        </b, <b, </b>,
+        </base, <base, </base>,
+        </bdi, <bdi, </bdi>,
+        </bdo, <bdo, </bdo>,
+        </blockquote, <blockquote, </blockquote>,
+        </body, <body, </body>,
+        </br, <br, </br>,
+        </button, <button, </button>,
+        </canvas, <canvas, </canvas>,
+        </caption, <caption, </caption>,
+        </cite, <cite, </cite>,
+        </code, <code, </code>,
+        </col, <col, </col>,
+        </colgroup, <colgroup, </colgroup>,
+        </data, <data, </data>,
+        </datalist, <datalist, </datalist>,
+        </dd, <dd, </dd>,
+        </del, <del, </del>,
+        </details, <details, </details>,
+        </dfn, <dfn, </dfn>,
+        </div, <div, </div>,
+        </dl, <dl, </dl>,
+        </dt, <dt, </dt>,
+        </em, <em, </em>,
+        </embed, <embed, </embed>,
+        </fieldset, <fieldset, </fieldset>,
+        </figcaption, <figcaption, </figcaption>,
+        </figure, <figure, </figure>,
+        </footer, <footer, </footer>,
+        </form, <form, </form>,
+        </h1, <h1, </h1>,
+        </h2, <h2, </h2>,
+        </h3, <h3, </h3>,
+        </h4, <h4, </h4>,
+        </h5, <h5, </h5>,
+        </h6, <h6, </h6>,
+        </head, <head, </head>,
+        </header, <header, </header>,
+        </hr, <hr, </hr>,
+        </html, <html, </html>,
+        </i, <i, </i>,
+        </iframe, <iframe, </iframe>,
+        </img, <img, </img>,
+        </input, <input, </input>,
+        </ins, <ins, </ins>,
+        </kbd, <kbd, </kbd>,
+        </keygen, <keygen, </keygen>,
+        </label, <label, </label>,
+        </legend, <legend, </legend>,
+        </li, <li, </li>,
+        </link, <link, </link>,
+        </main, <main, </main>,
+        </map, <map, </map>,
+        </mark, <mark, </mark>,
+        </math, <math, </math>,
+        </menu, <menu, </menu>,
+        </menuitem, <menuitem, </menuitem>,
+        </meta, <meta, </meta>,
+        </meter, <meter, </meter>,
+        </nav, <nav, </nav>,
+        </noscript, <noscript, </noscript>,
+        </object, <object, </object>,
+        </ol, <ol, </ol>,
+        </optgroup, <optgroup, </optgroup>,
+        </option, <option, </option>,
+        </output, <output, </output>,
+        </p, <p, </p>,
+        </param, <param, </param>,
+        </pre, <pre, </pre>,
+        </progress, <progress, </progress>,
+        </q, <q, </q>,
+        </rp, <rp, </rp>,
+        </rt, <rt, </rt>,
+        </ruby, <ruby, </ruby>,
+        </s, <s, </s>,
+        </samp, <samp, </samp>,
+        </script, <script, </script>,
+        </section, <section, </section>,
+        </select, <select, </select>,
+        </small, <small, </small>,
+        </source, <source, </source>,
+        </span, <span, </span>,
+        </strong, <strong, </strong>,
+        </style, <style, </style>,
+        </summary, <summary, </summary>,
+        </sup, <sup, </sup>,
+        </svg, <svg, </svg>,
+        </table, <table, </table>,
+        </tbody, <tbody, </tbody>,
+        </td, <td, </td>,
+        </template, <template, </template>,
+        </textarea, <textarea, </textarea>,
+        </tfoot, <tfoot, </tfoot>,
+        </th, <th, </th>,
+        </thead, <thead, </thead>,
+        </time, <time, </time>,
+        </title, <title, </title>,
+        </tr, <tr, </tr>,
+        </track, <track, </track>,
+        </u, <u, </u>,
+        </ul, <ul, </ul>,
+        </var, <var, </var>,
+        </video, <video, </video>,
+        </wbr, <wbr, </wbr>,
+        />, <!
+    },
+    otherkeywords={
+        % General
+        >,
+        % Standard tags
+        <!DOCTYPE,
+        </html, <html, <head, <title, </title, <style, </style, <link, </head, <meta, />, <h1, <h2, </h1, </h2,
+        % body
+        </body, <body,
+        % Divs
+        </div, <div, </div>, 
+        % Paragraphs
+        </p, <p, </p>,
+        % scripts
+        </script, <script,
+        % More tags...
+        <canvas, /canvas>, <svg, <rect, <animateTransform, </rect>, </svg>, <video, <source, <iframe, </iframe>, </video>, <image, </image>, <header, </header, <article, </article
+    },
+    ndkeywords={
+        % General
+        =,
+        % HTML attributes
+        charset=, src=, id=, width=, height=, style=, type=, rel=, href=,
+        % SVG attributes
+        fill=, attributeName=, begin=, dur=, from=, to=, poster=, controls=, x=, y=, repeatCount=, xlink:href=,
+        % properties
+        margin:, padding:, background-image:, border:, top:, left:, position:, width:, height:, margin-top:, margin-bottom:, font-size:, line-height:,
+        % CSS3 properties
+        transform:, -moz-transform:, -webkit-transform:,
+        animation:, -webkit-animation:,
+        transition:,  transition-duration:, transition-property:, transition-timing-function:,
+    }
+}
